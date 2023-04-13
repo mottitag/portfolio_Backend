@@ -4,7 +4,9 @@ import com.portfolio.GabrielMotta.model.Person;
 import com.portfolio.GabrielMotta.repository.PersonRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PersonService implements IPersonService{
     
     @Autowired
