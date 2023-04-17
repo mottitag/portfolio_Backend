@@ -7,21 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Controller {
+@RequestMapping("per")
+public class PersonController {
     
     @Autowired
     private IPersonService persServ;
     
-    @PostMapping("/new/person")
+    @PostMapping("/new")
     public void addPerson (@RequestBody Person per){
         persServ.createPerson(per);
     }
     
-    @GetMapping ("/ver/person")
+    @GetMapping ("/bring")
     @ResponseBody
     public List<Person>bringPersons(){
         return persServ.findPersons();

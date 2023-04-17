@@ -45,4 +45,24 @@ public class Person {
     @JoinColumn(name = "psk_fk", referencedColumnName = "id")
     private List<Skill> skills;
     
+    public void addEducation (Education edu){
+        this.educations.add(edu);
+    }
+    
+    public void addExperience (Experience exp){
+        this.experiences.add(exp);
+    }
+    
+    public void addProject (Project pro){
+        this.projects.add(pro);
+    }
+    
+    public void addService (Service serv){
+        this.services.add(serv);
+    }
+    
+    public void addSkill (Skill ski){
+        this.skills.add(ski);
+    }
+    
 }

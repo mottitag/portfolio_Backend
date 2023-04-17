@@ -1,7 +1,8 @@
-package com.portfolio.GabrielMotta.service;
+package com.portfolio.GabrielMotta.service.impl;
 
 import com.portfolio.GabrielMotta.model.Person;
 import com.portfolio.GabrielMotta.repository.PersonRepository;
+import com.portfolio.GabrielMotta.service.IPersonService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,11 @@ public class PersonService implements IPersonService{
 
     @Override
     public void createPerson(Person per) {
+        persRepo.save(per);
+    }
+    
+    @Override
+    public void updatePerson(Person per){
         persRepo.save(per);
     }
 
