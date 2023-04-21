@@ -3,11 +3,10 @@ package com.portfolio.GabrielMotta.dto;
 import lombok.Data;
 
 @Data
-public class ServiceRequest {
+public class HomeRequest {
     
-    private Long id;
-    private String name;
+    private String title;
     private String description;
-    private Long personId;
+    private String phone;
     
 }

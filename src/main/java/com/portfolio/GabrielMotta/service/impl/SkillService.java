@@ -1,7 +1,5 @@
 package com.portfolio.GabrielMotta.service.impl;
 
-import com.portfolio.GabrielMotta.dto.SkillRequest;
-import com.portfolio.GabrielMotta.model.Person;
 import com.portfolio.GabrielMotta.model.Skill;
 import com.portfolio.GabrielMotta.repository.SkillRepository;
 import com.portfolio.GabrielMotta.service.ISkillService;
@@ -15,7 +13,6 @@ public class SkillService implements ISkillService{
     
     @Autowired
     public SkillRepository skiRepo;
-    private PersonService perServ;
 
     @Override
     public List<Skill> findSkills() {
@@ -23,19 +20,9 @@ public class SkillService implements ISkillService{
     }
 
     @Override
-    public void createSkill(SkillRequest skiReq) {
-        Skill newSkill = new Skill();
-        BeanUtils.copyProperties(skiReq, newSkill);
-        
-        Person per = this.perServ.findPerson(skiReq.getPersonId());
-        per.addSkill(newSkill);
-        this.perServ.updatePerson(per);
-    }
-    
-    @Override
-    public void updateSkill(SkillRequest skiReq){
-        Skill updateSkill = this.findSkill(skiReq.getId());
-        BeanUtils.copyProperties(skiReq, updateSkill);
+    public void updateSkill(Skill skill){
+        Skill updateSkill = this.findSkill(skill.getId());
+        BeanUtils.copyProperties(skill, updateSkill);
         this.skiRepo.save(updateSkill);
     }
 

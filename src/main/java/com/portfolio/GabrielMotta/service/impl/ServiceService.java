@@ -1,7 +1,5 @@
 package com.portfolio.GabrielMotta.service.impl;
 
-import com.portfolio.GabrielMotta.dto.ServiceRequest;
-import com.portfolio.GabrielMotta.model.Person;
 import com.portfolio.GabrielMotta.repository.ServiceRepository;
 import com.portfolio.GabrielMotta.service.IServiceService;
 import java.util.List;
@@ -14,7 +12,6 @@ public class ServiceService implements IServiceService{
     
     @Autowired
     public ServiceRepository servRepo;
-    private PersonService perServ;
     
     @Override
     public List<com.portfolio.GabrielMotta.model.Service> findServices() {
@@ -32,20 +29,9 @@ public class ServiceService implements IServiceService{
     }
 
     @Override
-    public void createService(ServiceRequest serReq) {
-        com.portfolio.GabrielMotta.model.Service ser = new com.portfolio.GabrielMotta.model.Service();
-        BeanUtils.copyProperties(serReq, ser);
-        
-        Person per = this.perServ.findPerson(serReq.getPersonId());
-        per.addService(ser);
-        this.perServ.updatePerson(per);
-        
-    }
-
-    @Override
-    public void updateService(ServiceRequest serReq) {
-        com.portfolio.GabrielMotta.model.Service updateSer = this.findService(serReq.getId());
-        BeanUtils.copyProperties(serReq, updateSer);
+    public void updateService(com.portfolio.GabrielMotta.model.Service serv) {
+        com.portfolio.GabrielMotta.model.Service updateSer = this.findService(serv.getId());
+        BeanUtils.copyProperties(serv, updateSer);
         this.servRepo.save(updateSer);
     }
     
