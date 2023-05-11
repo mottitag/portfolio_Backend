@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.portfolio.GabrielMotta.GabrielMottaApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 120.839 s - in com.portfolio.GabrielMotta.GabrielMottaApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 122.531 s - in com.portfolio.GabrielMotta.GabrielMottaApplicationTests
