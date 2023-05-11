@@ -27,16 +27,16 @@ public class PersonController {
     @Autowired
     private IPersonService persServ;
     
-//    @PostMapping("/new")
-//    public void addPerson (@RequestBody Person per){
-//        persServ.createPerson(per);
-//    }
-//    
-//    @GetMapping ("/bring")
-//    @ResponseBody
-//    public List<Person>bringPersons(){
-//        return persServ.findPersons();
-//    }
+    @PostMapping("/new")
+    public void addPerson (@RequestBody Person per){
+        persServ.createPerson(per);
+    }
+    
+    @GetMapping ("/bring")
+    @ResponseBody
+    public List<Person>bringPersons(){
+        return persServ.findPersons();
+    }
     
     @GetMapping ("/bringHome/{id}")
     @ResponseBody
