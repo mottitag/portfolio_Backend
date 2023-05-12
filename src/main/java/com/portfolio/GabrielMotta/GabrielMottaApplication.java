@@ -18,7 +18,7 @@ public class GabrielMottaApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://portfolio-backend-yh5v.onrender.com");
+				registry.addMapping("/**").allowedOrigins("https://porfolio-mottita.web.app");
 			}
 		};
 	}
