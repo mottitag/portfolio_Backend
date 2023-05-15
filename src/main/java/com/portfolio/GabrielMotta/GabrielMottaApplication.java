@@ -13,14 +13,14 @@ public class GabrielMottaApplication {
 		SpringApplication.run(GabrielMottaApplication.class, args);
 	}
         
-        @Bean
-        public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://porfolio-mottita.web.app");
-			}
-		};
-	}
+//        @Bean
+//        public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurer() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/**").allowedOrigins("https://porfolio-mottita.web.app");
+//			}
+//		};
+//	}
 
 }

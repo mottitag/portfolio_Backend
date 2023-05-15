@@ -13,7 +13,6 @@ com\portfolio\GabrielMotta\service\IPersonService.class
 com\portfolio\GabrielMotta\repository\EducationRepository.class
 com\portfolio\GabrielMotta\service\impl\ServiceService.class
 com\portfolio\GabrielMotta\controller\EducationController.class
-com\portfolio\GabrielMotta\GabrielMottaApplication$1.class
 com\portfolio\GabrielMotta\service\IServiceService.class
 com\portfolio\GabrielMotta\dto\ProfileRequest.class
 com\portfolio\GabrielMotta\repository\SkillRepository.class
